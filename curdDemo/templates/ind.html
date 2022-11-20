@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% extends 'base.html' %} {% block content %}
+  <h1>sudent details</h1>
+  <table>
+    <thead>
+      <th>student no</th>
+      <th>student Name</th>
+      <th>student class</th>
+      <th>student adress</th>
+    </thead>
+    <tr>
+      {% for s in s1 %}
+      <td>{{s.sno}}</td>
+      <td>{{s.sname}}</td>
+      <td>{{s.sclass}}</td>
+      <td>{{s.saddress}}</td>
+      <td>
+        <a href="/update/{{s.id}}"><button>Update</button></a
+        ><a href="/delete/{{s.id}}"><button>Delete</button></a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/create"><button type="button">Add new Student</button></a>
+  {% endblock %}
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
+<h1>update sudent details</h1>
+<form method="POST">
+
+    student Roll no <input type="text" name = 'sno' value="{{student.sno}}""><br>
+    student Name <input type="text" name = 'sname' value="{{student.sname}}""><br>
+    student Class <input type="text" name = 'sclass' value="{{student.sclass}}""><br>
+    student Address <input type="text" name = 'saddress' value="{{student.saddress}}""><br>
+    {% csrf_token %}
+    <input type="submit" value="update Student">
+
+
+</form>
+   
+    
+
+{% endblock %}
+
+</html>
